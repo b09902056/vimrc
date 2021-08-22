@@ -10,6 +10,13 @@ set noswapfile
 set incsearch
 set colorcolumn=80
 set clipboard=unnamedplus
+set scrolloff=5
+
+noremap ( ()<LEFT>
+noremap [ []<LEFT>
+noremap ' ''<LEFT>
+noremap " ""<LEFT>
+inoremap {<CR> {<CR>}<Esc>O
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
@@ -17,7 +24,7 @@ Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 set termguicolors 
-let ayucolor="dark"
+let ayucolor="mirage"
 colorscheme ayu
 " IndentLine {{
 let g:indentLine_char = ''
